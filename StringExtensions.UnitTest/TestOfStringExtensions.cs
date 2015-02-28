@@ -60,9 +60,9 @@ namespace StringExtensions.UnitTest
         public void StringExtensions_Left_SubStringNull()
         {
             var source = "This is a sample string";
-            Assert.IsTrue(source.Left("") == string.Empty, "The value should be the same as empty");
+            Assert.IsNull(source.Left(""), "The value should be null");
             source = null;
-            Assert.IsTrue(source.Left("sample") == string.Empty, "The value should be the same as empty");
+            Assert.IsNull(source.Left("sample"), "The value should be the same as empty");
         }
 
         [TestMethod]
